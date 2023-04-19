@@ -1,26 +1,26 @@
-export function createCharacterCard() {
+export function createCharacterCard(name) {
   // BOX CONTAINER
   const mainContainer = document.querySelector("main");
-  const myDivContainer = document.createElement('[data-js="search-bar-container]');
-
 
   const myForm = document.querySelector("form");
 
   // CARD CREATION
 
-  const mylisteUl= document.createElement('[data-js="card-container"]');
-  mylisteUl.classList.add("card-container");
-   mylisteUl.innerHTML= " <li class="card">
+  const myLu = document.querySelector("lu");
+
+  const myListeLi = document.createElement("li");
+  myListeLi.classList.add("card-container");
+
+  myListeLi.innerHTML = ` <li class="card">
    <div class="card__image-container">
      <img
-       class="card__image"
-       src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+       class="card__image" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
        alt="Rick Sanchez"
      />
      <div class="card__image-gradient"></div>
    </div>
    <div class="card__content">
-     <h2 class="card__title">Rick Sanchez</h2>
+     <h2 class="card__title">${name}</h2>
      <dl class="card__info">
        <dt class="card__info-title">Status</dt>
        <dd class="card__info-description">Alive</dd>
@@ -30,6 +30,6 @@ export function createCharacterCard() {
        <dd class="card__info-description">51</dd>
      </dl>
    </div>
- </li>"
-  
+ </li>`;
+  mainContainer.append(myListeLi);
 }

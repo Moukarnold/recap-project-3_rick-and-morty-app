@@ -15,4 +15,5 @@ const maxPage = 1;
 const page = 1;
 const searchQuery = "";
 
-createCharacterCard();
+createCharacterCard("Arnold");
+function fetchCharacters();
