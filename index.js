@@ -16,4 +16,20 @@ const page = 1;
 const searchQuery = "";
 
 createCharacterCard("Arnold");
-function fetchCharacters();
+
+async function fetchCharacters() {
+  const endPoint = await fetch("https://rickandmortyapi.com/api/character");
+  const dataPoint = await endPoint.json();
+
+  const dataList = dataPoint.results;
+  //cardContainer.innerHTML = '';
+
+  console.log(dataPoint);
+  console.log(dataList);
+  dataList.forEach((character) => {
+    const card = createCharacterCard(character);
+  });
+  createCharacterCard();
+}
+
+fetchCharacters();

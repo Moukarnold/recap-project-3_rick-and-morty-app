@@ -1,4 +1,4 @@
-export function createCharacterCard(name) {
+export function createCharacterCard() {
   // BOX CONTAINER
   const mainContainer = document.querySelector("main");
 
@@ -6,7 +6,7 @@ export function createCharacterCard(name) {
 
   // CARD CREATION
 
-  const myLu = document.querySelector("lu");
+  //const myLu = document.querySelector("lu");
 
   const myListeLi = document.createElement("li");
   myListeLi.classList.add("card-container");
@@ -31,5 +31,8 @@ export function createCharacterCard(name) {
      </dl>
    </div>
  </li>`;
+
+  //const newImage = document.createElement("img");
+
   mainContainer.append(myListeLi);
 }
